@@ -34,16 +34,15 @@ router.get("/songs/:id", async (req,res) => {
 })
 
 router.post("/songs", async (req, res) => {
-  try {
-    const song = await new Song(req.body)
-    await song.save()
-    res.status(201).json(song)
-    console.log(song)
-  } 
-  catch (err) {
-    res.status(400).send(err)
-  }
-})
+    try {
+        const newSong = new Song(req.body);
+        await newSong.save();
+        res.status(201).json(newSong);
+    } catch (err) {
+        res.status(400).json({ error: "Cannot add song" });
+    }
+});
+
 
 router.put("/songs/:id", async(req,res) =>{
   try{
