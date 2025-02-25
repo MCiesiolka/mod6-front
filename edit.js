@@ -26,7 +26,9 @@ async function updateSong(){
         genre: document.querySelector("#genre").value ?
             document.querySelector("#genre").value.split(",") : []
     }
-    const response = await fetch("http://localhost:3000/api/songs/" + songID, {
+   import { API_URL } from "./config.js";
+
+const response = await fetch(`${API_URL}/songs/${songID}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"
