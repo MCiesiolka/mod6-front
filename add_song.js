@@ -12,7 +12,10 @@ async function addSong(){
 
     }
 
-    const response = await fetch("http://localhost:3000/api/songs", {
+   import { API_URL } from "./config.js";
+
+const response = await fetch(`${API_URL}/songs`, {
+
         method: "POST",
         headers: {
             "Content-Type" : "application/json"
