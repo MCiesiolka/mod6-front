@@ -15,7 +15,6 @@ async function addSong(){
 
     }
 
-   import { API_URL } from "./config.js";
 
 const response = await fetch(`${API_URL}/songs`, {
 
