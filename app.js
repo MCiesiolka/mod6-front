@@ -1,6 +1,6 @@
 const express = require("express");
 const Song = require("./songs");
-var cors = require("cors");
+const cors = require("cors");
 
 const app = express();
 app.use(cors());
