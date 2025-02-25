@@ -1,4 +1,7 @@
-addEventListener("DOMContentLoaded", function(){
+import { API_URL } from "./config.js";
+
+addEventListener("DOMContentLoaded", async function(){
+
     document.querySelector("#addBtn").addEventListener("click", addSong)
 })
 
