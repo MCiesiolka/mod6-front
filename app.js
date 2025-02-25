@@ -1,13 +1,10 @@
 const express = require("express");
-const Song = require("./songs");
-const cors = require("cors");
+const Song = require("./models/songs");
+var cors = require("cors");
 
 const app = express();
-app.use(cors({
-    origin: "https://mciesiolka.github.io/mod6-front/index.html",
-    methods: "GET,POST,PUT,DELETE",
-    allowedHeaders: "Content-Type"
-}));
+app.use(cors());
+
 app.use(express.json());
 
 const router = express.Router();
