@@ -1,4 +1,7 @@
+import { API_URL } from "./config.js";
+
 addEventListener("DOMContentLoaded", async function(){
+
     const urlparam = new URLSearchParams(window.location.search)
     const songID = urlparam.get("id")
     console.log(songID)
