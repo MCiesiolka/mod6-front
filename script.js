@@ -1,5 +1,8 @@
 addEventListener("DOMContentLoaded", async function(){
-    const response = await fetch("http://localhost:3000/api/songs")
+    import { API_URL } from "./config.js";
+
+const response = await fetch(`${API_URL}/songs`);
+
     const songs = await response.json()
 
     let html =""
